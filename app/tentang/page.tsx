@@ -29,6 +29,8 @@ const loadingStates = [
 
 
 export default function Page() {
+  const [loading, setLoading] = useState(false);
+
   return (
     <>
       <Navbar />
@@ -49,19 +51,8 @@ export default function Page() {
         <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
           Kami dari kelompok <span className="text-amber-500">7</span> membuat project Sejarah Kerajaan Makassar.
         </div>
-        <MultiStepLoaderDemo />
-      </motion.div>
-    </AuroraBackground>
-    <Footer />
-    </>
-  );
-}
 
-export function MultiStepLoaderDemo() {
-  const [loading, setLoading] = useState(false);
-  return (
-    <>
-      <Loader loadingStates={loadingStates} loading={loading} duration={2000} />
+ <Loader loadingStates={loadingStates} loading={loading} duration={2000} />
 
       <button
         onClick={() => setLoading(true)}
@@ -82,6 +73,9 @@ export function MultiStepLoaderDemo() {
           <IconSquareRoundedX className="h-10 w-10" />
         </button>
       )}
+      </motion.div>
+    </AuroraBackground>
+    <Footer />
     </>
   );
 }
