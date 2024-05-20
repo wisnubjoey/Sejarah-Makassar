@@ -6,7 +6,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'Tentang', href: 'tentang' },
-  { name: 'Refrensi', href: '#' },
+  { name: 'Refrensi', href: 'refrensi' },
   { name: 'Peninggalan', href: 'peninggalan' },
 ]
 
@@ -19,7 +19,7 @@ export default function Navbar() {
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <h1 className='text-xl font-bold text-black underline decoration-amber-500'>K7</h1>
+            <h1 className='text-xl font-bold text-black underline decoration-black hover:text-amber-500 transition duration-200'>K7</h1>
           </a>
         </div>
         <div className="flex lg:hidden">
